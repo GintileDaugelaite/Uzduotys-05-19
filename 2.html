@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antra užduotis</title>
+
+</head>
+
+<body>
+    <p>Sukurkite mygtuką kuris keistų fono spalvą iš baltos į raudoną ir atvirkščiai.</p>
+    <script>
+        let colors = ['red', 'white']
+        let body = document.querySelector('body')
+        let i = 0
+
+        let btn = document.createElement('button')
+        btn.innerHTML = 'Click'
+        document.body.appendChild(btn)
+        btn.type = 'submit'
+
+        btn.addEventListener('click', function() {
+            i = i < colors.length - 1 ? ++i : 0;
+            
+            body.style.backgroundColor = colors[i]
+        })
+
+    </script>
+</body>
+
+</html>

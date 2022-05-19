@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Šešta užduotis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        div.video {
+            display: none;
+        }
+
+
+        div.modal-content {
+            width: 670px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Sukurkite mygtuką su tekstu "Rodyti Video". Paspaudus ant jo puslapyje atidarykite modalinį langą (žiūrėti
+        iliustraciją).
+        Šiame lange įdėkite Jums patinkantį Youtube video (Pasinaudojant embded kodu, kurį galite rasti prie kiekvieno
+        video,
+        paspaudus mygtuką Share). Prie modalinio lango sukurkite uždarymo mygtuką ant kurio paspaudus video būtų
+        uždaromas.</p>
+
+    <div>
+        <button class="btn btn-primary showVideo" onclick="showDiv()">Rodyti Video</button>
+    </div>
+    <div class="video">
+        <div class="modal modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog"
+            id="modalSheet">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-6 shadow">
+                    <div class="modal-header border-bottom-0">
+
+                        <button type="button" class="btn-close hideVideo" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-0">
+                        <iframe width="642" height="361" src="https://www.youtube.com/embed/xI4u3FSBJSk"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.showVideo')
+
+        function showDiv() {
+            document.querySelector('.video').style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>
